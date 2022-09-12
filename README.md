@@ -20,9 +20,9 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-* Python 3.10+, que pode ser baixado em`<https://www.python.org/downloads/>`
-* Ter um token de bot do discord, que pode ser obtido em `<https://discord.com/developers/>`.
-* Ler `<https://discordpy.readthedocs.io/en/stable/>`.
+* `Python 3.10+, que pode ser baixado em:` <https://www.python.org/downloads/>
+* `Ter um token de bot do discord, que pode ser obtido em:` <https://discord.com/developers/>
+* `Ler` <https://discordpy.readthedocs.io/en/stable/>.
 
 ## 🚀 Instalando
 
@@ -30,12 +30,11 @@ Para instalar siga estas etapas:
 
 Windows:
 
-pip install discord
-pip install wavelink
-pip install itertools
 ```
-
-Então é só clonar o repositório
+° pip install discord
+° pip install wavelink
+° pip install itertools
+° Clonar o repositório e ser feliz.
 
 ```
 
