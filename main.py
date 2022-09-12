@@ -1,7 +1,7 @@
 import discord
+import wavelink
 from discord.ext import commands, tasks
 from itertools import cycle
-
 class WerBot(commands.Bot):
     def __init__(self):
         super().__init__(
@@ -18,20 +18,22 @@ class WerBot(commands.Bot):
                                    "cogs.fun.api.anime_carinho",
                                    "cogs.fun.api.anime_abraco",
                                    "cogs.fun.api.anime_wink",
-                                   "cogs.fun.api.shaco"]
+                                   "cogs.fun.api.shaco",
+                                   #"cogs.economy.event"
+                                   ]
     
     async def setup_hook(self): #def pra carregar as cogs
         for ext in self.initial_extensions:
             await self.load_extension(ext)
-        
-        #await bot.tree.sync(guild= discord.Object(id = 714536008263401523)) --> Use esse comando para rodar o bot em um server específico. 
             
+        #await bot.tree.sync(guild= discord.Object(id = 714536008263401523)) --> Use esse comando para rodar o bot em um server específico.        
     
     async def on_ready(self): #Apenas convenções pra saber quando deu merda ou não e outras coisas importantes
         print(f'{self.user} está online')
         print(
             f"Conectado ao Discord (Latência: {round(bot.latency * 1000)}ms).")
         status_swap.start() #Inicia o trocador de atividades, que é explicado mais abaixo
+    
 
 bot = WerBot() 
 
@@ -48,7 +50,6 @@ async def status_swap():
 
 with open("secrets/token.txt", "r", encoding='utf-8') as f: #Reader da pasta secrets (que vc deveria criar) pra importar o
     token = f.read()                                        #Token do bot
-
 bot.run(token) #acho que eh auto explicatório 
 
     

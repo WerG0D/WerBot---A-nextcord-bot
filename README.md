@@ -11,6 +11,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Mecanismo de browse para cogs simples
 - [x] Implementação dos slash commands
 - [x] Uso de algumas API's exemplificativas
+- [ ] Migrar para Nextcord.
 - [ ] Implementar database
 - [ ] Implementar cogs de musica
 - [ ] Implementar cogs de economia
