@@ -1,4 +1,0 @@
-pip install discord.py
-pip install itertools
-pip install wavelink
-
