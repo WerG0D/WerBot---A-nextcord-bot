@@ -16,5 +16,6 @@ token.txt
 .token/txt
 .config.py
 config.py/
+config.py
 main.db
 .main.db
