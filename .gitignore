@@ -14,3 +14,7 @@ secrets/
 .secrets/
 token.txt
 .token/txt
+.config.py
+config.py/
+main.db
+.main.db
