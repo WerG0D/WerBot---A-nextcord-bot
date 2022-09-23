@@ -1,4 +1,0 @@
-nextcord
-aiosqlite
-humanfriendly
-wavelink
