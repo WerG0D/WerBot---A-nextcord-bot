@@ -1,0 +1,9 @@
+nextcord
+aiosqlite
+humanfriendly
+requests
+datetime
+asyncio
+nextwave
+typing
+python-dotenv
