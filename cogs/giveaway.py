@@ -130,7 +130,7 @@ class Giveaway(commands.Cog):
 
     @giveaway.subcommand(name="iniciar", description="Começa um giveaway")
     @application_checks.has_permissions(manage_messages=True)
-    async def start(self, interaction: Interaction, prêmio: str = SlashOption(description="O prêmio do giveaway", required=True), canal: GuildChannel = SlashOption(channel_types=[ChannelType.text], description="Em qual canal o giveaway vai acontecer??", required=True), duração: str = SlashOption(description="A quantidade de tempo que o giveaway vai durar, exemplo: 5d, 6h, 30m", required=True), winners: int = SlashOption(description="O número de vencedores do giveaway", required=True)):
+    async def start(self, interaction: Interaction, prêmio: str = SlashOption(description="O prêmio do giveaway", required=True), canal: GuildChannel = SlashOption(channel_types=[ChannelType.text], description="Em qual canal o giveaway vai acontecer??", required=True), time: str = SlashOption(description="A quantidade de tempo que o giveaway vai durar, exemplo: 5d, 6h, 30m", required=True), winners: int = SlashOption(description="O número de vencedores do giveaway", required=True)):
         time = humanfriendly.parse_timespan(time)
         epochEnd = pyTime.time() + time
         async with self.bot.db.cursor() as cursor:
@@ -139,7 +139,7 @@ class Giveaway(commands.Cog):
                                   interaction.guild.id, "", winners, False)
                                  )
             embed = nextcord.Embed(
-                title=f"🎉{prêmio}🎉", description=f"Termina em:{int(epochEnd)}:f> ou <t:{int(epochEnd)}:R>\nVencedor(es): `{winners}`\nClique em `Entre no giveaway` para entrar :p", color=nextcord.Color.blurple())
+                title=f"🎉{prêmio}🎉", description=f"Termina em: <t:{int(epochEnd)}:R>\nVencedor(es): `{winners}`\nClique em `Entre no giveaway` para entrar :p", color=nextcord.Color.blurple())
             await interaction.response.send_message(f"Giveaway começou no canal: {canal.mention}", ephemeral=True)
             view = JoinGiveaway(
                 time, prêmio, interaction.guild.id, epochEnd, self.bot)
