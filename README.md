@@ -1,6 +1,6 @@
 # WerBot
 
-![Discord](https://img.shields.io/badge/%3CServer%3E-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)
+![Discord](https://img.shields.io/badge/nextcord-%25237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)
 ![Spotify](https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white)
 ![YouTube Music](https://img.shields.io/badge/YouTube_Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
@@ -29,9 +29,9 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-* `Python 3.10+, que pode ser baixado em:` <https://www.python.org/downloads/>
-* `Ter um token de bot do discord, que pode ser obtido em:` <https://discord.com/developers/>
-* `Ler` <https://nextcord.readthedocs.io/en/stable/>.
+- `Python 3.10+, que pode ser baixado em:` <https://www.python.org/downloads/>
+- `Ter um token de bot do discord, que pode ser obtido em:` <https://discord.com/developers/>
+- `Ler` <https://nextcord.readthedocs.io/en/stable/>.
 
 ## 🚀 Instalando
 
@@ -40,16 +40,20 @@ Para instalar siga estas etapas:
 Windows:
 
 ```
-° pip install nextcord
-° pip install wavelink
-° pip install itertools
-° pip install humanfriendly
-° pip install aiosqlite
+° nextcord
+°aiosqlite
+°humanfriendly
+°requests
+°datetime
+°asyncio
+°nextwave
+°typing
+°python-dotenv
 ° Clonar o repositório e ser feliz.
 
 ```
 
-## ☕ Usando 
+## ☕ Usando
 
 Para usar, siga estas etapas:
 

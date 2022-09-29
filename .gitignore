@@ -22,3 +22,4 @@ main.db
 discloud.config
 WerBot - Nextcord.zip
 __pycachache__/
+.env
