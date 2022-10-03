@@ -70,7 +70,8 @@ WerBot.bot_version = Wer.bot_versão #Pega a versão do bot na tupla
 diretorio = Path(__file__).parents[0] #Pega o diretório atual do arquivo main.py (Não mexa nisso)
 diretorio = str(diretorio)
 
-def slowprint(text, time):
+
+def slowprint(text, time): #Uma função para printar o texto lentamente.
 	for c in text:
 		sys.stdout.write(c)
 		sys.stdout.flush()
