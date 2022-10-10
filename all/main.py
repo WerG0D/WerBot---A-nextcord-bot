@@ -7,9 +7,8 @@ from Misc.messages import DeletarMensagem
 from time import sleep
 
 #importa os Miscs:
-from Misc.utilidades import Wer, DataB
-from Misc.bancodedados import config
-from Misc.mongo import Doc
+from Misc.utilidades import Wer
+
 
 
 #Setando as Intents / Permissões do bot
@@ -102,12 +101,12 @@ async def on_ready():
     
     
     #MongoDB:
-    WerBot.db = DataB.db
-    WerBot.config = Doc(WerBot.db, "config")
-    for document in await WerBot.config.get_all():
-        slowprint(f'ID: {document["_id"]} | Prefixo: {document["prefixo"]}\n',0.1)
+    #WerBot.db = DataB.db
+    #WerBot.config = Doc(WerBot.db, "config")
+   #for document in await WerBot.config.get_all():
+   #     slowprint(f'ID: {document["_id"]} | Prefixo: {document["prefixo"]}\n',0.1)
         
-    slowprint('\n-=-=-=-=-=🍃 MongoDB conectado com sucesso! ✔-=-=-=-=-=\n', 1)
+    #slowprint('\n-=-=-=-=-=🍃 MongoDB conectado com sucesso! ✔-=-=-=-=-=\n', 1)
     
     
     

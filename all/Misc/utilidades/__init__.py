@@ -215,10 +215,10 @@ class Colours: #Cores do bot, não altere. Simplesmente não reaja.
                          "yellowgreen": "0x9acd32"
                          }
 
-class DataB:
-    connection_url = environ.get("MONGO_URI")
-    mongo = motor.motor_asyncio.AsyncIOMotorClient(str(connection_url))
-    db = mongo["Brook"]
+#class DataB:
+    #connection_url = environ.get("MONGO_URI")
+    #mongo = motor.motor_asyncio.AsyncIOMotorClient(str(connection_url))
+    #db = mongo["Brook"]
 
 
 class Emojis: #Emojis do bot, um pouco bugado ainda
