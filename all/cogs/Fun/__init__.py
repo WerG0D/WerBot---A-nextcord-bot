@@ -4,6 +4,9 @@ import platform
 from io import BytesIO
 from Misc.utilidades import RapidApi
 from Misc.carregadores import json
+from craiyon import Craiyon
+import time
+import base64
 
 dotenv.load_dotenv()
 
@@ -203,3 +206,14 @@ class Fun(commands.Cog, description="Faz umas coisas engraçadas."):
         await ctx.send(' '.join(emojis))
 
 
+    @commands.command(name="IAart", description="Crie imagens belas com uma inteligencia virtual.", usage="<Descreva detalhadamente o que voce quer ver.>")
+    async def generate(self, ctx: commands.Context, *, prompt: str):
+        ETA = int(time.time() + 60)
+        mensagem = await ctx.send(f"🖌️ **Gerando imagem... Isso pode demorar um tempo. Tempo: <t:{ETA}:R>**")
+        generator = Craiyon()
+        result = generator.generate(prompt)
+        images = result.images
+        for i in images:
+            image = BytesIO(base64.decodebytes(i.encode("utf-8")))
+            return await mensagem.edit(content="🖌️ **Imagem gerada!**", file=nextcord.File(image, "image.png"))
+            

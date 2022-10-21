@@ -127,7 +127,6 @@ async def on_command_error(ctx, error):
     
     embederror.set_author(
         name="WerBot"
-        ,icon_url=ctx.WerBot.user.display_avatar
         )
     
     if isinstance(error, commands.errors.MissingRequiredArgument):
@@ -139,10 +138,6 @@ async def on_command_error(ctx, error):
                          ,value=f"```Não se preocupe, o Wer já recebeu uma mensagem sobre o erro e logo logo ele vai resolver... Se ele não tiver preguiça.\n\nAs vezes ele já até resolveu e tá lá no github do bot. **[clique aqui](https://github.com/WerG0D/WerBot---A-nextcord-bot)```"
                          ,inline=False)
     
-    embederror.set_footer(text=f"Versão do bot: {WerBot.bot_version}"
-                          ,value=f'comando pedido por: {ctx.author.name}#{ctx.author.discriminator}'
-                          ,icon_url=ctx.author.avatar_url
-                        )
     
     await ctx.send(embed=embederror, view=ver)
 
