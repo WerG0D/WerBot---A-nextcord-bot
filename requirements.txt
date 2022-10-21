@@ -30,5 +30,3 @@ urllib3
 webcolors
 nextcordUtils
 craiyon.py
-base64
-io
